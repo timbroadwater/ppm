@@ -3,7 +3,7 @@
 WordPress theme utilizes:
 * jQuery
 * [SASS](http://sass-lang.com/) (Syntactically Awesome Style Sheets)
-* WordPress (PHP)
+* [BlankSlate](https://wordpress.org/themes/blankslate/) (Blank WordPress Theme)
 
 To get up and running do the following:
 1. Download and install [Oracle VM VirtualBox Manager](https://www.virtualbox.org/wiki/Downloads)
