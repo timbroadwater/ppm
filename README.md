@@ -11,3 +11,5 @@ To get up and running do the following:
 
 Development environment:
 * https://wpdistillery.org/
+
+To launch goto: http://wpdistillery.vm/
