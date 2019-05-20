@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<?php wp_head(); ?>
-</head>
+	<head>
+		<meta charset="<?php bloginfo( 'charset' ); ?>" />
+		<meta name="viewport" content="width=device-width" />
+
+		<!-- Imported CSS -->
+		<link href="https://fonts.googleapis.com/css?family=Karla|Open+Sans&display=swap" rel="stylesheet">
+		
+	<?php wp_head(); ?>
+	</head>
 <body <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
 <header id="header">

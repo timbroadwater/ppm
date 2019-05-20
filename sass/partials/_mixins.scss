@@ -1,0 +1,9 @@
+// Media Queries 
+@mixin mq($dim) {
+	@if $dim == desktop {
+		@media (min-width: 1024px) { @content; }
+	}
+	@else if $dim == tablet {
+		@media (min-width: 768px)  { @content; }
+	}
+}

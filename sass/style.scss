@@ -1,0 +1,72 @@
+/*
+Theme Name: PPM 2019
+Theme URI: https://github.com/usergoodness/ppm
+Author: UserGoodness
+Author URI: https://usergoodness.com/
+Description: A theme for Pantry Plus More Inc.
+Version: 2019.1
+License: Not Licensed for Reuse
+Tags: one-column, featured-images, responsive
+Text Domain: ppm2019
+
+PPM 2019 WordPress Theme © 2011-2019 UserGoodness
+*/
+
+/********* SETTINGS ********/
+/* font, colors definitions, etc. */
+@import "partials/_default.scss";
+@import "partials/_mixins.scss";
+@import "partials/_brand.scss";
+
+
+
+/********* TOOLS *********/
+/* globally used mixins and functions. */
+
+
+
+/********* GENERIC *********/
+/* reset and/or normalize styles, box-sizing definition, etc. */
+
+ 
+
+/********* ELEMENTS *********/
+/* styling for bare HTML elements (like H1, A, etc.). */
+
+
+
+/********* OBJECTS *********/
+/* class-based selectors which define undecorated design patterns, for example media object known from OOCSS */
+
+
+
+/********* COMPONENETS *********/
+/* specific UI components. */
+.sticky {}
+.bypostauthor {}
+.wp-caption {}
+.wp-caption-text {}
+.gallery-caption {}
+.alignright {}
+.alignleft {}
+.aligncenter {}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+
+/********* UTILITIES *********/
+/* utilities and helper classes with ability to override */
+.hide {
+    display: none;
+}
+.acchide { /* accessibility hiding */
+	position: absolute;
+	top: -999999em;
+	left: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden; 
+}
