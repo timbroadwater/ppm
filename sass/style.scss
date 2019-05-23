@@ -46,6 +46,10 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
     padding: 0 30px;
     #branding {
     	display: inline-block;
+    	a {
+    		border: none;
+    		cursor: pointer;
+    	}
 	    img {
 	    	width: 238px;
 	    	height: 77px;
@@ -60,9 +64,10 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 
 		}
 		ul {
+			list-style-type: none;
 			li {
-				position: relative;
   				display: inline-block;
+  				height: 46px;
   				a {
 				    margin: 0 20px;
     				padding: 10px 0;
@@ -71,8 +76,12 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 					font-family: 'Karla', sans-serif;
 					font-weight: bold;
 					text-decoration: none;
+					cursor: pointer;
   				}
   				ul {
+  					padding: 0 !important;
+    				margin: 1em 0 0 20px;
+    				height: auto;
   					display: none;
 					position: absolute;
 					background-color: #f9f9f9;
@@ -80,11 +89,27 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 					box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 					padding: 12px 16px;
 					z-index: 1;
+					li {
+						height: auto;
+						display: block;
+						a {
+							min-width: 250px;
+							display: block;
+							font-weight: normal;
+							border-bottom: none !important;
+						}
+					}
+					li:hover {
+						background-color: $yellow;
+					}
   				}
 			}  				
   			li:hover ul {
 			  display: block;
 			}
+			li:hover a {
+				border-bottom: 4px solid $red1;
+			} 
 			a {
 				color: $black;
 				font-size: 18px;
@@ -93,9 +118,28 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 				text-decoration: none;
 			}
 			[aria-current] {
-				border-bottom: 4px solid $red1;
+				color: $red1;
 			}
 		}
+	}
+}
+#footer {
+	background: $black;
+	color: #fff;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	#footer-sidebar1, #footer-sidebar2, #footer-sidebar3 {
+		width: 33.33%;
+	    width: 33%;
+    	display: inline-block;
+	}
+	#copyright {
+		text-align: center;
 	}
 }
 

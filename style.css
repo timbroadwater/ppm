@@ -420,6 +420,9 @@ body {
   padding: 0 30px; }
   #header #branding {
     display: inline-block; }
+    #header #branding a {
+      border: none;
+      cursor: pointer; }
     #header #branding img {
       width: 238px;
       height: 77px;
@@ -428,35 +431,68 @@ body {
     display: inline-block;
     float: right;
     padding: 32px 0 0 0; }
-    #header #menu ul li {
-      position: relative;
-      display: inline-block; }
-      #header #menu ul li a {
-        margin: 0 20px;
-        padding: 10px 0;
+    #header #menu ul {
+      list-style-type: none; }
+      #header #menu ul li {
+        display: inline-block;
+        height: 46px; }
+        #header #menu ul li a {
+          margin: 0 20px;
+          padding: 10px 0;
+          color: #000100;
+          font-size: 18px;
+          font-family: 'Karla', sans-serif;
+          font-weight: bold;
+          text-decoration: none;
+          cursor: pointer; }
+        #header #menu ul li ul {
+          padding: 0 !important;
+          margin: 1em 0 0 20px;
+          height: auto;
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          padding: 12px 16px;
+          z-index: 1; }
+          #header #menu ul li ul li {
+            height: auto;
+            display: block; }
+            #header #menu ul li ul li a {
+              min-width: 250px;
+              display: block;
+              font-weight: normal;
+              border-bottom: none !important; }
+          #header #menu ul li ul li:hover {
+            background-color: #FAD31F; }
+      #header #menu ul li:hover ul {
+        display: block; }
+      #header #menu ul li:hover a {
+        border-bottom: 4px solid #FF1A45; }
+      #header #menu ul a {
         color: #000100;
         font-size: 18px;
         font-family: 'Karla', sans-serif;
         font-weight: bold;
         text-decoration: none; }
-      #header #menu ul li ul {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        padding: 12px 16px;
-        z-index: 1; }
-    #header #menu ul li:hover ul {
-      display: block; }
-    #header #menu ul a {
-      color: #000100;
-      font-size: 18px;
-      font-family: 'Karla', sans-serif;
-      font-weight: bold;
-      text-decoration: none; }
-    #header #menu ul [aria-current] {
-      border-bottom: 4px solid #FF1A45; }
+      #header #menu ul [aria-current] {
+        color: #FF1A45; }
+
+#footer {
+  background: #000100;
+  color: #fff; }
+  #footer a {
+    color: #fff;
+    text-decoration: none; }
+  #footer a:hover {
+    text-decoration: underline; }
+  #footer #footer-sidebar1, #footer #footer-sidebar2, #footer #footer-sidebar3 {
+    width: 33.33%;
+    width: 33%;
+    display: inline-block; }
+  #footer #copyright {
+    text-align: center; }
 
 /********* COMPONENETS *********/
 /* specific UI components. */

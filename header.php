@@ -13,7 +13,7 @@
 	<div id="wrapper" class="hfeed">
 		<header id="header">
 			<div id="branding">
-				<img alt="Pantry Plus More Logo" title="Pantry Plus More" src="<?php echo get_bloginfo('template_url') ?>/images/logo.png"/>
+				<a href="/"><img alt="Pantry Plus More Logo" title="Pantry Plus More" src="<?php echo get_bloginfo('template_url') ?>/images/logo.png"/></a>
 				<!--  <div id="site-title">
 					<?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a>

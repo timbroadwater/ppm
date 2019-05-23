@@ -85,6 +85,33 @@ register_sidebar( array(
 'before_title' => '<h3 class="widget-title">',
 'after_title' => '</h3>',
 ) );
+register_sidebar( array(
+'name' => 'Footer Left',
+'id' => 'footer-sidebar-1',
+'description' => 'Address in the footer area',
+'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'after_widget' => '</aside>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+register_sidebar( array(
+'name' => 'Footer Middle',
+'id' => 'footer-sidebar-2',
+'description' => 'Social media in the footer area',
+'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'after_widget' => '</aside>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+register_sidebar( array(
+'name' => 'Footer Right',
+'id' => 'footer-sidebar-3',
+'description' => 'Contact in the footer area',
+'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'after_widget' => '</aside>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
 }
 add_action( 'wp_head', 'ppm2019_pingback_header' );
 function ppm2019_pingback_header() {
