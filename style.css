@@ -411,8 +411,12 @@ body {
 /* styling for bare HTML elements (like H1, A, etc.). */
 /********* OBJECTS *********/
 /* class-based selectors which define undecorated design patterns, for example media object known from OOCSS */
+body {
+  margin: 0; }
+
 #wrapper {
   max-width: 1140px;
+  padding: 0 1em;
   margin: 0 auto; }
 
 #header {
@@ -480,6 +484,7 @@ body {
         color: #FF1A45; }
 
 #footer {
+  padding: 30px 0;
   background: #000100;
   color: #fff; }
   #footer a {
@@ -488,11 +493,45 @@ body {
   #footer a:hover {
     text-decoration: underline; }
   #footer #footer-sidebar1, #footer #footer-sidebar2, #footer #footer-sidebar3 {
-    width: 33.33%;
-    width: 33%;
-    display: inline-block; }
+    display: inline-block;
+    width: 100%; }
+    @media (min-width: 768px) {
+      #footer #footer-sidebar1, #footer #footer-sidebar2, #footer #footer-sidebar3 {
+        width: 49%; } }
+    @media (min-width: 1024px) {
+      #footer #footer-sidebar1, #footer #footer-sidebar2, #footer #footer-sidebar3 {
+        width: 33%; } }
+  #footer #footer-sidebar2 i {
+    font-size: 24px;
+    padding: 0 10px 0 0;
+    width: 25px; }
+  #footer #footer-sidebar3 {
+    font-size: 14px; }
+    #footer #footer-sidebar3 #mc_embed_signup_scroll input {
+      height: 48px;
+      border: solid 1px #fff;
+      background-color: #464646;
+      padding: 0 2%;
+      color: white;
+      width: 60%; }
+      @media (min-width: 768px) {
+        #footer #footer-sidebar3 #mc_embed_signup_scroll input {
+          width: 65%; } }
+    #footer #footer-sidebar3 #mc_embed_signup_scroll #mc-embedded-subscribe {
+      display: inline-block;
+      background: #fff;
+      color: #000;
+      height: 50px;
+      margin: 0 0 0 2%;
+      padding: 0 2%;
+      width: 25%; }
+      @media (min-width: 768px) {
+        #footer #footer-sidebar3 #mc_embed_signup_scroll #mc-embedded-subscribe {
+          width: 22%; } }
   #footer #copyright {
-    text-align: center; }
+    text-align: center;
+    color: #9b9b9b;
+    padding: 20px 0 0 0; }
 
 /********* COMPONENETS *********/
 /* specific UI components. */
