@@ -47,84 +47,141 @@ body {
 	margin: 0 auto;
 }
 #header {
-	height: 112px;
-    padding: 0 30px;
+	min-height: 70px;
+	border-bottom: 1px solid #000;
+	@include mq(desktop) {
+		height: 112px;
+		border-bottom: none;
+	}
     #branding {
     	display: inline-block;
+    	margin: 0;
+    	@include mq(desktop) {
+    		margin: 0 0 0 2em;
+    	}
     	a {
     		border: none;
     		cursor: pointer;
     	}
 	    img {
-	    	width: 238px;
-	    	height: 77px;
-	    	padding: 16px 0;
+	    	width: auto;
+    		height: 50px;
+    		padding: 10px 0;
+	    	@include mq(desktop) {
+		    	width: 238px;
+		    	height: 77px;
+		    	padding: 16px 0;
+		    }
 	    }
 	}
 	#menu {
-		display: inline-block;
-	    float: right;
-	    padding: 32px 0 0 0;
-		#menu-main-navigation-container {
-
-		}
-		ul {
-			list-style-type: none;
-			li {
-  				display: inline-block;
-  				height: 46px;
-  				a {
-				    margin: 0 20px;
-    				padding: 10px 0;
-    				color: $black;
+		display: none;
+		@include mq(desktop) {
+			display: inline-block;
+		    float: right;
+		    padding: 32px 0 0 0;
+			ul {
+				list-style-type: none;
+				li {
+	  				display: inline-block;
+	  				height: 46px;
+	  				a {
+					    margin: 0 20px;
+	    				padding: 10px 0;
+	    				color: $black;
+						font-size: 18px;
+						font-family: 'Karla', sans-serif;
+						font-weight: bold;
+						text-decoration: none;
+						cursor: pointer;
+	  				}
+	  				ul {
+	  					padding: 0 !important;
+	    				margin: 1em 0 0 20px;
+	    				height: auto;
+	  					display: none;
+						position: absolute;
+						background-color: #f9f9f9;
+						min-width: 160px;
+						box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+						padding: 12px 16px;
+						z-index: 1;
+						li {
+							height: auto;
+							display: block;
+							a {
+								min-width: 250px;
+								display: block;
+								font-weight: normal;
+								border-bottom: none !important;
+							}
+						}
+						li:hover {
+							background-color: $yellow;
+						}
+	  				}
+				}  				
+	  			li:hover ul {
+				  display: block;
+				}
+				li:hover a {
+					border-bottom: 4px solid $red1;
+				} 
+				a {
+					color: $black;
 					font-size: 18px;
 					font-family: 'Karla', sans-serif;
 					font-weight: bold;
 					text-decoration: none;
-					cursor: pointer;
-  				}
-  				ul {
-  					padding: 0 !important;
-    				margin: 1em 0 0 20px;
-    				height: auto;
-  					display: none;
-					position: absolute;
-					background-color: #f9f9f9;
-					min-width: 160px;
-					box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-					padding: 12px 16px;
-					z-index: 1;
-					li {
-						height: auto;
-						display: block;
-						a {
-							min-width: 250px;
-							display: block;
-							font-weight: normal;
-							border-bottom: none !important;
-						}
-					}
-					li:hover {
-						background-color: $yellow;
-					}
-  				}
-			}  				
-  			li:hover ul {
-			  display: block;
+				}
+				[aria-current] {
+					color: $red1;
+				}
 			}
-			li:hover a {
-				border-bottom: 4px solid $red1;
-			} 
-			a {
-				color: $black;
-				font-size: 18px;
-				font-family: 'Karla', sans-serif;
-				font-weight: bold;
-				text-decoration: none;
-			}
-			[aria-current] {
+		}
+	}
+	#mobiletoggle {
+		display: inline-block;
+	    height: 50px;
+	    float: right;
+	    margin: 10px 0;
+	    .fa {
+	    	font-size: 36px;
+		    display: block;
+		    height: 30px;
+	    }
+		@include mq(desktop) {
+			display: none;
+		}
+		span {
+			font-size: 12px;
+    		display: block;
+		}
+	}
+	#mobilemenu {
+		display: none;
+		@include mq(desktop) {
+			display: none !important;
+		}
+		ul {
+			list-style-type: none;
+		    padding: 0;
+		    margin: 0;
+		    [aria-current] {
 				color: $red1;
+				font-weight: bold;
 			}
+		    li {
+		    	padding: 0 0 10px 0;
+	    		a {
+				    color: #000;
+			    	text-decoration: none;
+			    }
+			    ul {
+			    	padding: 10px 0 0 20px;
+    				margin: 0;
+			    }
+		    }
 		}
 	}
 }
@@ -215,6 +272,9 @@ body {
 /* utilities and helper classes with ability to override */
 .hide {
     display: none;
+}
+.destroy {
+	display: none !important;
 }
 .acchide { /* accessibility hiding */
 	position: absolute;

@@ -420,68 +420,119 @@ body {
   margin: 0 auto; }
 
 #header {
-  height: 112px;
-  padding: 0 30px; }
+  min-height: 70px;
+  border-bottom: 1px solid #000; }
+  @media (min-width: 1024px) {
+    #header {
+      height: 112px;
+      border-bottom: none; } }
   #header #branding {
-    display: inline-block; }
+    display: inline-block;
+    margin: 0; }
+    @media (min-width: 1024px) {
+      #header #branding {
+        margin: 0 0 0 2em; } }
     #header #branding a {
       border: none;
       cursor: pointer; }
     #header #branding img {
-      width: 238px;
-      height: 77px;
-      padding: 16px 0; }
+      width: auto;
+      height: 50px;
+      padding: 10px 0; }
+      @media (min-width: 1024px) {
+        #header #branding img {
+          width: 238px;
+          height: 77px;
+          padding: 16px 0; } }
   #header #menu {
-    display: inline-block;
-    float: right;
-    padding: 32px 0 0 0; }
-    #header #menu ul {
-      list-style-type: none; }
-      #header #menu ul li {
+    display: none; }
+    @media (min-width: 1024px) {
+      #header #menu {
         display: inline-block;
-        height: 46px; }
-        #header #menu ul li a {
-          margin: 0 20px;
-          padding: 10px 0;
-          color: #000100;
-          font-size: 18px;
-          font-family: 'Karla', sans-serif;
-          font-weight: bold;
-          text-decoration: none;
-          cursor: pointer; }
-        #header #menu ul li ul {
-          padding: 0 !important;
-          margin: 1em 0 0 20px;
-          height: auto;
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          padding: 12px 16px;
-          z-index: 1; }
-          #header #menu ul li ul li {
-            height: auto;
+        float: right;
+        padding: 32px 0 0 0; }
+        #header #menu ul {
+          list-style-type: none; }
+          #header #menu ul li {
+            display: inline-block;
+            height: 46px; }
+            #header #menu ul li a {
+              margin: 0 20px;
+              padding: 10px 0;
+              color: #000100;
+              font-size: 18px;
+              font-family: 'Karla', sans-serif;
+              font-weight: bold;
+              text-decoration: none;
+              cursor: pointer; }
+            #header #menu ul li ul {
+              padding: 0 !important;
+              margin: 1em 0 0 20px;
+              height: auto;
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              padding: 12px 16px;
+              z-index: 1; }
+              #header #menu ul li ul li {
+                height: auto;
+                display: block; }
+                #header #menu ul li ul li a {
+                  min-width: 250px;
+                  display: block;
+                  font-weight: normal;
+                  border-bottom: none !important; }
+              #header #menu ul li ul li:hover {
+                background-color: #FAD31F; }
+          #header #menu ul li:hover ul {
             display: block; }
-            #header #menu ul li ul li a {
-              min-width: 250px;
-              display: block;
-              font-weight: normal;
-              border-bottom: none !important; }
-          #header #menu ul li ul li:hover {
-            background-color: #FAD31F; }
-      #header #menu ul li:hover ul {
-        display: block; }
-      #header #menu ul li:hover a {
-        border-bottom: 4px solid #FF1A45; }
-      #header #menu ul a {
-        color: #000100;
-        font-size: 18px;
-        font-family: 'Karla', sans-serif;
-        font-weight: bold;
-        text-decoration: none; }
-      #header #menu ul [aria-current] {
-        color: #FF1A45; }
+          #header #menu ul li:hover a {
+            border-bottom: 4px solid #FF1A45; }
+          #header #menu ul a {
+            color: #000100;
+            font-size: 18px;
+            font-family: 'Karla', sans-serif;
+            font-weight: bold;
+            text-decoration: none; }
+          #header #menu ul [aria-current] {
+            color: #FF1A45; } }
+  #header #mobiletoggle {
+    display: inline-block;
+    height: 50px;
+    float: right;
+    margin: 10px 0; }
+    #header #mobiletoggle .fa {
+      font-size: 36px;
+      display: block;
+      height: 30px; }
+    @media (min-width: 1024px) {
+      #header #mobiletoggle {
+        display: none; } }
+    #header #mobiletoggle span {
+      font-size: 12px;
+      display: block; }
+  #header #mobilemenu {
+    display: none; }
+    @media (min-width: 1024px) {
+      #header #mobilemenu {
+        display: none !important; } }
+    #header #mobilemenu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; }
+      #header #mobilemenu ul [aria-current] {
+        color: #FF1A45;
+        font-weight: bold; }
+      #header #mobilemenu ul li {
+        padding: 0 0 10px 0; }
+        #header #mobilemenu ul li a {
+          color: #000;
+          text-decoration: none; }
+        #header #mobilemenu ul li ul {
+          padding: 10px 0 0 20px;
+          margin: 0; }
 
 #footer {
   padding: 30px 0;
@@ -543,6 +594,9 @@ body {
 /* utilities and helper classes with ability to override */
 .hide {
   display: none; }
+
+.destroy {
+  display: none !important; }
 
 .acchide {
   /* accessibility hiding */

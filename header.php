@@ -4,6 +4,17 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width" />
 
+	<!-- Author, Description, and Keywords -->  
+    <meta name="author" content="UserGoodness">
+    <meta name="description" content="Leading the community in ending childhood hunger through free school pantries, food giveaways, and health and wellness programs in Monongalia County.">
+    <meta name="keywords" content="">
+
+    <!-- Favicon -->
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo("template_url"); ?>/scripts/script.js"></script>
+
 	<!-- Imported CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
 	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css" type="text/css" rel="stylesheet">
@@ -26,6 +37,15 @@
 				<!--<div id="search"><?php get_search_form(); ?></div> -->
 				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 			</nav>
+			<div id="mobiletoggle">
+				<i class="fa fa-bars"></i>
+				<i class="fa fa-times destroy"></i>
+				<span>menu</span>
+			</div>
+			<nav id="mobilemenu">
+				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+			</nav>
 		</div>
 	</header>
 	<div id="container">
+		<div id="wrapper">
