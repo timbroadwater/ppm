@@ -22,8 +22,66 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 
 /********* TOOLS *********/
 /* globally used mixins and functions. */
-
-
+.colwrapper {
+	margin: 2em 0;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	display: block;
+	clear: both;
+    float: left;
+}
+.onecol {
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	float: left;
+}
+.twocol {
+	display: inline-block;
+	overflow: hidden;
+	height: auto;
+	width: 100%;
+	padding: 0;
+	box-sizing: border-box;
+	float: left;
+	@include mq(tablet) {
+		width: 50%;
+	}
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.threecol {
+	display: inline-block;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	float: left;
+	padding: 0;
+	@include mq(tablet) {
+		width: 50%;
+	}
+	@include mq(desktop) {
+		width: 33%;
+	}
+}
+.twocol-textpadleft {
+	padding: 0;
+	@include mq(tablet) {
+		padding: 0 2em 0 0;
+	}
+}
+.twocol-textpadright {
+	padding: 0;
+	@include mq(tablet) {
+		padding: 0 0 0 2em;
+	}
+}
 
 /********* GENERIC *********/
 /* reset and/or normalize styles, box-sizing definition, etc. */
@@ -35,11 +93,12 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 a:link	{
 	cursor: pointer;
 }
-.button {
+button {
   width: 196px;
   height: 64px;
   border-radius: 4px;
   background-color: $red1;
+  font-size: 24px;
   color: white;
 }
 #hpimage {
@@ -50,6 +109,7 @@ a:link	{
 	background-image: url('../ppm/images/header2.jpg');
 	background-position: center center;
 	background-size: cover;
+	margin: 0 0 2em 0;
 	@include mq(tablet) {
 		height: 480px;
 	}
@@ -235,6 +295,7 @@ body {
 }
 #container {
 	padding-bottom: 2em;
+	overflow: hidden;
 }
 #footer {
 	padding: 30px 0;

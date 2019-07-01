@@ -78,10 +78,11 @@ return $sizes;
 add_action( 'widgets_init', 'ppm2019_widgets_init' );
 function ppm2019_widgets_init() {
 register_sidebar( array(
-'name' => esc_html__( 'Sidebar Widget Area', 'ppm2019' ),
-'id' => 'primary-widget-area',
-'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-'after_widget' => '</li>',
+'name' => 'Homepage Banner',
+'id' => 'homepage-banner',
+'description' => 'Address in the footer area',
+'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+'after_widget' => '</aside>',
 'before_title' => '<h3 class="widget-title">',
 'after_title' => '</h3>',
 ) );
@@ -109,6 +110,14 @@ register_sidebar( array(
 'description' => 'Contact in the footer area',
 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 'after_widget' => '</aside>',
+'before_title' => '<h3 class="widget-title">',
+'after_title' => '</h3>',
+) );
+register_sidebar( array(
+'name' => esc_html__( 'Sidebar Widget Area', 'ppm2019' ),
+'id' => 'primary-widget-area',
+'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+'after_widget' => '</li>',
 'before_title' => '<h3 class="widget-title">',
 'after_title' => '</h3>',
 ) );
