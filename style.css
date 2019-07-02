@@ -414,6 +414,15 @@ body {
   clear: both;
   float: left; }
 
+.colwrapperbig {
+  margin: 6em 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  display: block;
+  clear: both;
+  float: left; }
+
 .onecol {
   display: block;
   overflow: hidden;
@@ -445,9 +454,14 @@ body {
   box-sizing: border-box;
   float: left;
   padding: 0; }
+  .threecol img {
+    max-width: 50%;
+    height: auto;
+    margin: 0 25%; }
   @media (min-width: 768px) {
     .threecol {
-      width: 50%; } }
+      width: 50%;
+      padding: 0 1em; } }
   @media (min-width: 1024px) {
     .threecol {
       width: 33%; } }
@@ -464,8 +478,46 @@ body {
     .twocol-textpadright {
       padding: 0 0 0 2em; } }
 
+hr {
+  width: 45px;
+  height: 1px;
+  color: #FAD31F;
+  background: #FAD31F;
+  border: 1px solid #FAD31F;
+  margin: 0;
+  display: inline-block;
+  padding: 0; }
+
 /********* GENERIC *********/
 /* reset and/or normalize styles, box-sizing definition, etc. */
+.flexing {
+  display: block; }
+  @media (min-width: 768px) {
+    .flexing {
+      display: flex;
+      align-items: center; } }
+
+.centertext {
+  text-align: center;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto; }
+
+.center {
+  text-align: left; }
+  @media (min-width: 768px) {
+    .center {
+      text-align: center; } }
+
+.red {
+  color: #FF1A45; }
+
+.clearer {
+  clear: both; }
+  @media (min-width: 1024px) {
+    .clearer {
+      clear: none; } }
+
 /********* ELEMENTS *********/
 /* styling for bare HTML elements (like H1, A, etc.). */
 a:link {
@@ -475,9 +527,16 @@ button {
   width: 196px;
   height: 64px;
   border-radius: 4px;
+  font-size: 24px; }
+
+.primary {
   background-color: #FF1A45;
-  font-size: 24px;
-  color: white; }
+  color: white;
+  border: none; }
+
+.secondary {
+  border: solid 4px #0049FF;
+  background-color: white; }
 
 #hpimage {
   display: block;
@@ -522,6 +581,39 @@ button {
       #hpimage #hpimage-text {
         font-size: 32px;
         margin: 200px 20px 0 0; } }
+
+#results {
+  background: #FF1A45; }
+  #results ul {
+    padding: 2em;
+    overflow: hidden;
+    margin: 0;
+    list-style: none;
+    display: block; }
+    @media (min-width: 1024px) {
+      #results ul {
+        display: flex;
+        align-items: center; } }
+    #results ul li {
+      background: url("../ppm/images/bullet.png") no-repeat 1em top;
+      width: 100%;
+      float: left;
+      box-sizing: border-box;
+      font-family: Karla;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.33;
+      letter-spacing: normal;
+      color: white;
+      padding-left: 3em; }
+      @media (min-width: 1024px) {
+        #results ul li {
+          width: 33%;
+          background: url("../ppm/images/bullet.png") no-repeat 1em center; } }
+      #results ul li:before {
+        padding: 1px; }
 
 /********* OBJECTS *********/
 /* class-based selectors which define undecorated design patterns, for example media object known from OOCSS */

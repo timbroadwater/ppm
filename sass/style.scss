@@ -31,6 +31,15 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 	clear: both;
     float: left;
 }
+.colwrapperbig {
+	margin: 6em 0;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	display: block;
+	clear: both;
+    float: left;
+}
 .onecol {
 	display: block;
 	overflow: hidden;
@@ -63,8 +72,14 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 	box-sizing: border-box;
 	float: left;
 	padding: 0;
+	img {
+	    max-width: 50%;
+    	height: auto;
+    	margin: 0 25%;
+	}
 	@include mq(tablet) {
 		width: 50%;
+		padding: 0 1em;
 	}
 	@include mq(desktop) {
 		width: 33%;
@@ -82,11 +97,47 @@ PPM 2019 WordPress Theme © 2011-2019 UserGoodness
 		padding: 0 0 0 2em;
 	}
 }
+hr {
+    width: 45px;
+    height: 1px;
+    color: #FAD31F;
+    background: #FAD31F;
+    border: 1px solid #FAD31F;
+    margin: 0;
+    display: inline-block;
+    padding: 0;
+}
 
 /********* GENERIC *********/
 /* reset and/or normalize styles, box-sizing definition, etc. */
-
- 
+.flexing {
+	display: block;
+	@include mq(tablet) {
+		display: flex;
+		align-items: center;
+	}
+}
+.centertext {
+	text-align: center;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+.center {
+	text-align: left;
+	@include mq(tablet) {
+		text-align: center;
+	}
+}
+.red {
+	color: $red1;
+}
+.clearer {
+	clear: both;
+	@include mq(desktop) {
+		clear: none;
+	}
+}
 
 /********* ELEMENTS *********/
 /* styling for bare HTML elements (like H1, A, etc.). */
@@ -94,12 +145,19 @@ a:link	{
 	cursor: pointer;
 }
 button {
-  width: 196px;
-  height: 64px;
-  border-radius: 4px;
-  background-color: $red1;
-  font-size: 24px;
-  color: white;
+	width: 196px;
+	height: 64px;
+	border-radius: 4px;
+	font-size: 24px;
+}
+.primary {
+	background-color: $red1;
+	color: white;
+	border: none;
+}
+.secondary {
+	border: solid 4px $blue;
+	background-color: white;
 }
 #hpimage {
 	display: block;
@@ -143,6 +201,42 @@ button {
 		@include mq(desktop) {
 			font-size: 32px;
 			margin: 200px 20px 0 0;
+		}
+	}
+}
+#results {
+	background: $red1;
+	ul {
+	    padding: 2em;
+    	overflow: hidden;
+    	margin: 0;
+    	list-style: none;
+    	display: block;
+    	@include mq(desktop) {
+	    	display: flex;
+    		align-items: center;
+    	}
+		li {
+			background: url("../ppm/images/bullet.png") no-repeat 1em top;
+			width: 100%;
+			@include mq(desktop) {
+				width: 33%;
+				background: url("../ppm/images/bullet.png") no-repeat 1em center;
+			}
+			float: left;
+    		box-sizing: border-box;
+			font-family: Karla;
+			font-size: 24px;
+			font-weight: bold;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.33;
+			letter-spacing: normal;
+			color: white;
+			padding-left: 3em;
+			&:before {
+				padding: 1px;
+			}
 		}
 	}
 }
