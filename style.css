@@ -10,7 +10,7 @@ License: Not Licensed for Reuse
 Tags: one-column, featured-images, responsive
 Text Domain: ppm2019
 
-PPM 2019 WordPress Theme © 2011-2019 UserGoodness
+PPM 2019 WordPress Theme ┬⌐ 2011-2019 UserGoodness
 */
 /********* SETTINGS ********/
 /* font, colors definitions, etc. */
@@ -537,6 +537,25 @@ button {
 .secondary {
   border: solid 4px #0049FF;
   background-color: white; }
+
+.wp-block-button a {
+  min-width: 196px;
+  height: auto;
+  border-radius: 4px;
+  font-size: 24px;
+  background-color: #FF1A45;
+  color: white;
+  border: none;
+  text-decoration: none;
+  cursor: pointer; }
+
+.is-style-outline {
+  background-color: white; }
+  .is-style-outline a {
+    color: black;
+    border: 4px solid !important;
+    border-color: #0049ff !important;
+    cursor: pointer; }
 
 #hpimage {
   display: block;
